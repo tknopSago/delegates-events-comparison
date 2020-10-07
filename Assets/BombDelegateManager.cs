@@ -1,6 +1,7 @@
 ﻿namespace Sago.Delegates.Test {
 
 	using UnityEngine;
+	using UnityEngine.UI;
 
 	public class BombDelegateManager : MonoBehaviour {
 
@@ -16,6 +17,19 @@
 			set;
 		}
 
+		public System.Func<int> GetAmmoStats {
+			get;
+			set;
+		}
+
+		#endregion
+
+
+		#region Serialized Fields
+
+		[SerializeField]
+		private Text m_DelegateResponseText;
+
 		#endregion
 
 
@@ -23,6 +37,17 @@
 		public void CreateBomb() {
 			if (this.CreateBombFunc != null) {
 				this.CreateBombFunc();
+			}
+		}
+
+		public void GetAmmo() {
+			if (this.GetAmmoStats != null) {
+				string ammoResponse;
+				ammoResponse = "Ammo: " + GetAmmoStats();
+				Debug.Log(ammoResponse);
+				if (m_DelegateResponseText != null) {
+					m_DelegateResponseText.text = ammoResponse;
+				}
 			}
 		}
 
