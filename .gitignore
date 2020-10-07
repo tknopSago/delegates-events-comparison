@@ -1,0 +1,44 @@
+# Files
+.DS_Store
+.Trashes
+*.csproj
+*.booproj
+*.pidb
+*.sln
+*.suo
+*.svd
+*.unityproj
+*.user
+*.userprefs
+*.pbxuser
+*.xccheckout
+*.apk
+*.ipa
+*.sublime*
+xcuserdata
+
+# Unity
+/Assets/Plugins/Android/CrossWalkWebView*
+/Assets/Plugins/Android/GooglePlay*
+/Assets/Plugins/Android/Kindle*
+/Assets/Plugins/Android/KindleFreeTime*
+/Assets/Plugins/Android/SagoBiz*
+/Assets/Project/AssetBundles*
+/Assets/StreamingAssets*
+/bin/
+/Library/
+/obj/
+/Temp/
+
+# Build
+/Build/
+/iOS/
+/iOSSimulator/
+/Kindle/
+/Windows Store/
+/Windows Phone/
+
+# Custom
+AssetBundleAdaptorMap.asset*
+/Artwork/
+/Assets/Build/iOS/.Native/Settings.bundle/
